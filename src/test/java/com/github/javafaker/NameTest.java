@@ -43,6 +43,16 @@ public class NameTest  extends AbstractFakerTest{
     }
 
     @Test
+    public void testMaleFirstName() {
+        assertThat(faker.name().maleFirstName(), matchesRegularExpression("\\w+"));
+    }
+    
+    @Test
+    public void testFemaleFirstName() {
+        assertThat(faker.name().femaleFirstName(), matchesRegularExpression("\\w+"));
+    }
+    
+    @Test
     public void testLastName() {
         assertThat(faker.name().lastName(), matchesRegularExpression("[A-Za-z']+"));
     }

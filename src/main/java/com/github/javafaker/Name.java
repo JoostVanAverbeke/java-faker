@@ -61,7 +61,23 @@ public class Name {
     public String firstName() {
         return faker.fakeValuesService().resolve("name.first_name", this, faker);
     }
+ 
+    /**
+     * <p>Returns a random male 'given' name such as Aaron, Abdul, Abe or Abel</p>
+     * @return a 'given' name such as Aaron, Abdul, Abe or Abel
+     */
+    public String maleFirstName() {
+    	return faker.fakeValuesService().resolve("name.male_first_name", this, faker);
+    }
 
+    /**
+     * <p>Returns a random female 'given' name such as Abbey, Abbie, Abby or Abigail</p>
+     * @return a 'given' name such as Abbey, Abbie, Abby or Abigail
+     */
+    public String femaleFirstName() {
+    	return faker.fakeValuesService().resolve("name.female_first_name", this, faker);
+    }
+    
     /**
      * <p>Returns a random last name such as Smith, Jones or Baldwin</p>
      * @return a random last name such as Smith, Jones or Baldwin
